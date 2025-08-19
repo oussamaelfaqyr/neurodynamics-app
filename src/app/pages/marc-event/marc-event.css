@@ -1,0 +1,269 @@
+/* marc-event.component.css */
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-20px); 
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Float animation for decorative elements */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Smooth scrolling for carousel */
+.carousel-container {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.5) transparent;
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 4px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Gradient text effects */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom button hover effects */
+.btn-hover-effect {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-hover-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-hover-effect:hover::before {
+  left: 100%;
+}
+
+/* Card hover animations */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Pulse animation for active elements */
+.pulse-active {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+/* Timeline specific styles */
+.timeline-item {
+  animation: slideIn 0.6s ease-out;
+}
+
+.timeline-item:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+.timeline-item:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+/* Speaker card hover effect */
+.speaker-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.speaker-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.speaker-card:hover .speaker-avatar {
+  transform: scale(1.1);
+}
+
+.speaker-avatar {
+  transition: transform 0.3s ease;
+}
+
+/* Video thumbnail hover effects */
+.video-thumbnail {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.video-thumbnail::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.video-thumbnail:hover::after {
+  opacity: 1;
+}
+
+/* Schedule session hover effect */
+.schedule-session {
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.schedule-session:hover {
+  border-left-color: #3b82f6;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  transform: translateX(8px);
+}
+
+/* Sponsor logo hover animation */
+.sponsor-logo {
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.sponsor-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Team member card animations */
+.team-member {
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member:hover .member-avatar {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.member-avatar {
+  transition: transform 0.3s ease;
+}
+
+/* Registration countdown styling */
+.countdown-box {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .carousel-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .timeline-item {
+    margin-left: 0;
+  }
+  
+  .schedule-session {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Loading states */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .gradient-text {
+    -webkit-text-fill-color: unset;
+    color: #000;
+  }
+  
+  .card-hover {
+    border: 2px solid #000;
+  }
+}

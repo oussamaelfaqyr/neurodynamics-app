@@ -1,0 +1,199 @@
+<app-header></app-header>
+<section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+  <div class="container mx-auto px-6">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+        <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+        Our Structure
+      </div>
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        Specialized 
+        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Cells</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        NEURODYNAMICS is organized into specialized cells, each focusing on different aspects of AI and robotics innovation
+      </p>
+    </div>
+
+    <!-- Technical Cells -->
+    <div class="mb-20">
+      <div class="flex items-center gap-4 mb-12">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+            <i class="fas fa-microchip text-white text-sm"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-gray-900">Technical Cells</h3>
+        </div>
+        <div class="flex-1 h-px bg-gradient-to-r from-blue-500 to-transparent"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- AI Cell -->
+        <div 
+          class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-blue-200"
+          [class.animate-slide-up]="isVisible"
+          style="animation-delay: 0.1s;"
+        >
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-brain text-white text-2xl"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-gray-900 mb-3">AI Cell</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Focused on machine learning, deep learning, natural language processing, and computer vision. Developing intelligent systems that can learn and adapt.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Machine Learning</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Deep Learning</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">NLP</span>
+          </div>
+        </div>
+
+        <!-- Robotics Cell -->
+        <div 
+          class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-purple-200"
+          [class.animate-slide-up]="isVisible"
+          style="animation-delay: 0.2s;"
+        >
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-robot text-white text-2xl"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-gray-900 mb-3">Robotics Cell</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Designing and building autonomous robots, from hardware integration to control systems. Creating machines that interact with the physical world.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Hardware</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Automation</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Control Systems</span>
+          </div>
+        </div>
+
+        <!-- Data Cell -->
+        <div 
+          class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-cyan-200"
+          [class.animate-slide-up]="isVisible"
+          style="animation-delay: 0.3s;"
+        >
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-chart-line text-white text-2xl"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-gray-900 mb-3">Data Cell</h4>
+            <p class="text-gray-600 leading-relaxed">
+              Specializing in data science, big data analytics, and data visualization. Transforming raw data into actionable insights and intelligence.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm">Data Science</span>
+            <span class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm">Analytics</span>
+            <span class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm">Visualization</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Non-Technical Cells -->
+    <div>
+      <div class="flex items-center gap-4 mb-12">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg flex items-center justify-center">
+            <i class="fas fa-users text-white text-sm"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-gray-900">Non-Technical Cells</h3>
+        </div>
+        <div class="flex-1 h-px bg-gradient-to-r from-pink-500 to-transparent"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Design Cell -->
+        <div 
+          class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-pink-200"
+          [class.animate-slide-up]="isVisible"
+          style="animation-delay: 0.4s;"
+        >
+          <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-palette text-white text-lg"></i>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Design</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Creating visual identities, user interfaces, and marketing materials that communicate our technological vision.
+          </p>
+        </div>
+
+        <!-- Sponsoring Cell -->
+        <div 
+          class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-green-200"
+          [class.animate-slide-up]="isVisible"
+          style="animation-delay: 0.5s;"
+        >
+          <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-handshake text-white text-lg"></i>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Sponsoring</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Building partnerships with industry leaders and securing funding for our innovative projects and events.
+          </p>
+        </div>
+
+        <!-- Event Cell -->
+        <div 
+          class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-orange-200"
+          [class.animate-slide-up]="isVisible"
+          style="animation-delay: 0.6s;"
+        >
+          <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-calendar-alt text-white text-lg"></i>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Event</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Organizing workshops, conferences, and competitions that bring together the AI and robotics community.
+          </p>
+        </div>
+
+        <!-- Project Cell -->
+        <div 
+          class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-indigo-200"
+          [class.animate-slide-up]="isVisible"
+          style="animation-delay: 0.7s;"
+        >
+          <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-project-diagram text-white text-lg"></i>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Project</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Coordinating collaborative projects and ensuring successful delivery of innovative solutions.
+          </p>
+        </div>
+
+        <!-- Media Cell -->
+        <div 
+          class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-indigo-200"
+          [class.animate-slide-up]="isVisible"
+          style="animation-delay: 0.8s;"
+        >
+          <div class="w-12 h-12 bg-gradient-to-br from-indigo-800 to-emerald-400 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fas fa-photo-video text-white text-lg"></i>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Media</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Coordinating creative media projects and ensuring impactful delivery of compelling visual and digital content.
+          </p>
+        </div>
+      </div>
+    </div>
+
+   
+
+  </div>
+</section>
+<!-- Add FontAwesome icons CDN in your head tag -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer" />

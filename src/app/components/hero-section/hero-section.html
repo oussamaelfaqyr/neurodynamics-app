@@ -1,0 +1,141 @@
+<section class="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0">
+    <!-- Floating geometric shapes -->
+    <div class="absolute top-20 left-10 w-20 h-20 border-2 border-blue-400 rotate-45 animate-pulse opacity-20"></div>
+    <div class="absolute top-40 right-20 w-16 h-16 border-2 border-purple-400 rotate-12 animate-bounce opacity-30"></div>
+    <div class="absolute bottom-40 left-20 w-24 h-24 border-2 border-cyan-400 rotate-45 animate-pulse opacity-25"></div>
+    <div class="absolute bottom-20 right-10 w-12 h-12 border-2 border-pink-400 rotate-12 animate-bounce opacity-20"></div>
+    
+    <!-- Circuit-like patterns -->
+    <div class="absolute top-1/3 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+    <div class="absolute top-1/2 right-1/3 w-2 h-2 bg-purple-400 rounded-full animate-ping" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-1/3 left-1/3 w-2 h-2 bg-cyan-400 rounded-full animate-ping" style="animation-delay: 2s;"></div>
+    
+    <!-- Neural network connections -->
+    <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1000 1000">
+      <defs>
+        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8" />
+          <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+        </linearGradient>
+      </defs>
+      <line x1="100" y1="200" x2="300" y2="400" stroke="url(#lineGradient)" stroke-width="2" class="animate-pulse"/>
+      <line x1="300" y1="400" x2="600" y2="300" stroke="url(#lineGradient)" stroke-width="2" class="animate-pulse" style="animation-delay: 0.5s;"/>
+      <line x1="600" y1="300" x2="800" y2="500" stroke="url(#lineGradient)" stroke-width="2" class="animate-pulse" style="animation-delay: 1s;"/>
+      <line x1="200" y1="600" x2="500" y2="700" stroke="url(#lineGradient)" stroke-width="2" class="animate-pulse" style="animation-delay: 1.5s;"/>
+      <line x1="500" y1="700" x2="750" y2="800" stroke="url(#lineGradient)" stroke-width="2" class="animate-pulse" style="animation-delay: 2s;"/>
+    </svg>
+  </div>
+
+  <!-- Main Content -->
+  <div class="relative z-10 container mx-auto px-6 pt-32 pb-20">
+    <div class="flex flex-col lg:flex-row items-center justify-between min-h-[80vh]">
+      
+      <!-- Left Content -->
+      <div class="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
+        <!-- Main Title -->
+        <div class="mb-8">
+          <h1 class="text-5xl lg:text-7xl font-black text-white mb-4 leading-tight">
+            <span class="block" [class.animate-slide-up]="isLoaded">NEURO</span>
+            <span class="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent" [class.animate-slide-up]="isLoaded" style="animation-delay: 0.2s;">
+              DYNAMICS
+            </span>
+          </h1>
+          <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto lg:mx-0 mb-6" [class.animate-slide-up]="isLoaded" style="animation-delay: 0.4s;"></div>
+        </div>
+
+        <!-- Subtitle -->
+        <p class="text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl" [class.animate-slide-up]="isLoaded" style="animation-delay: 0.6s;">
+          Where
+          <span class="text-blue-400 font-semibold">Brains</span> and 
+          <span class="text-purple-400 font-semibold">Machines</span> converge 
+        </p>
+
+        <!-- Description -->
+        <p class="text-lg text-gray-400 mb-12 max-w-xl" [class.animate-slide-up]="isLoaded" style="animation-delay: 0.8s;">
+          Join ENSIAS's leading AI and Robotics club. Innovate, learn, and shape the technological landscape of tomorrow.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" [class.animate-slide-up]="isLoaded" style="animation-delay: 1s;">
+          <button class="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300">
+            <span class="flex items-center justify-center gap-2">
+              Join Our Community
+              <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+            </span>
+          </button>
+          
+          <button class="group border-2 border-gray-400 text-gray-300 hover:border-white hover:text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+            <span class="flex items-center justify-center gap-2">
+              Explore Projects
+              <i class="fas fa-external-link-alt group-hover:rotate-45 transition-transform duration-300"></i>
+            </span>
+          </button>
+        </div>
+
+        <!-- Stats -->
+        <div class="flex flex-wrap gap-8 justify-center lg:justify-start mt-16" [class.animate-slide-up]="isLoaded" style="animation-delay: 1.2s;">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-white">{{ stats.members }}+</div>
+            <div class="text-gray-400">Active Members</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-blue-400">{{ stats.projects }}+</div>
+            <div class="text-gray-400">Projects</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-purple-400">{{ stats.events }}+</div>
+            <div class="text-gray-400">Events</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual Content -->
+      <div class="lg:w-1/2 flex justify-center" [class.animate-slide-up]="isLoaded" style="animation-delay: 0.5s;">
+        <div class="relative">
+          <!-- Main geometric shape -->
+          <div class="w-80 h-80 lg:w-96 lg:h-96 relative">
+            <!-- Outer rotating ring -->
+            <div class="absolute inset-0 border-4 border-blue-400 rounded-full animate-spin opacity-30" style="animation-duration: 20s;"></div>
+            
+            <!-- Middle rotating ring -->
+            <div class="absolute inset-8 border-4 border-purple-400 rounded-full animate-spin opacity-40" style="animation-duration: 15s; animation-direction: reverse;"></div>
+            
+            <!-- Inner pulsing core -->
+            <div class="absolute inset-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center animate-pulse">
+              <!-- Neural network icon using FontAwesome -->
+              <i class="fas fa-brain text-white text-6xl"></i>
+            </div>
+            
+            <!-- Floating elements around the main shape -->
+            <div class="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg rotate-45 animate-bounce opacity-80 flex items-center justify-center">
+              <i class="fas fa-microchip text-white text-lg"></i>
+            </div>
+            <div class="absolute -bottom-4 -left-4 w-8 h-8 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full animate-pulse opacity-80 flex items-center justify-center">
+              <i class="fas fa-robot text-white text-sm"></i>
+            </div>
+            <div class="absolute top-1/4 -left-8 w-6 h-6 border-2 border-cyan-400 rotate-45 animate-spin opacity-60 flex items-center justify-center" style="animation-duration: 8s;">
+              <i class="fas fa-cog text-cyan-400 text-xs"></i>
+            </div>
+            <div class="absolute bottom-1/4 -right-8 w-10 h-10 border-2 border-pink-400 rounded-full animate-ping opacity-40 flex items-center justify-center">
+              <i class="fas fa-bolt text-pink-400 text-sm"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center items-center">
+        <i class="fas fa-chevron-down text-gray-400 text-sm animate-pulse"></i>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Add FontAwesome icons CDN in your head tag -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
