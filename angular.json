@@ -31,7 +31,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -47,8 +46,7 @@
             },
             "development": {
               "optimization": false,
-              "sourceMap": true,
-              "extractCss": false
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
